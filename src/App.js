@@ -8,7 +8,7 @@ import Footer from './komponente/Footer';
 import { useState } from 'react';
 import Uporedi from './komponente/Uporedi';
 function App() {
- 
+
   const [telefoni] = useState([
 
     {
@@ -112,7 +112,11 @@ function App() {
 
   const [telefoniUporedjivanje,setTelefoniUporedjivanje]=useState([]);
   const [brojUporedi,setBrojUporedi]=useState(0);
+  const [sort,setSort]=useState(true);
 
+  function sortiraj(){
+    setSort(!sort);
+  }
   function uporediTelefon(id){
     setBrojUporedi(brojUporedi+1);
     telefoni.forEach((t)=>{
@@ -125,9 +129,9 @@ function App() {
   return (
     <div  > 
       <BrowserRouter className="App">
-        <Navbar></Navbar>
+        <Navbar sortiraj={sortiraj}></Navbar>
         <Routes>
-            <Route path="/" element={<Pocetna telefoni={telefoni} uporedi={uporediTelefon}></Pocetna>}> </Route>
+            <Route path="/" element={<Pocetna telefoni={telefoni} uporedi={uporediTelefon} sort={sort}></Pocetna>}> </Route>
             <Route path="/kontakt" element={<Kontakt></Kontakt>}> </Route>
             <Route path="/uporedi" element={<Uporedi broj={brojUporedi} telefoniUporedjivanje={telefoniUporedjivanje}></Uporedi>}> </Route>
 

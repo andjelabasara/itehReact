@@ -408,3 +408,33 @@ body{
    margin-top: 0;
   justify-content: space-between;
  }
+
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.uporedi{
+
+  margin: 10%;
+
+
+
+}
+.celijaSlika{
+  max-width: 15%;
+}
+.slika{
+  max-width:250px;
+}
