@@ -7,7 +7,7 @@ function Navbar({sortiraj}) {
         <Link to="/">Pocetna</Link>
         <Link to="/kontakt">Kontakt</Link>
         <Link to="/uporedi">Uporedi</Link> 
-        <button className='btn-sort' onClick={()=>sortiraj()}>Sortiraj</button> 
+        <button className='btn-sort' onClick={()=>sortiraj()}>Sortiraj</button>  
 
     </div>
 

@@ -1,5 +1,7 @@
  
-
+import { BsFillPhoneFill,BsBatteryFull,BsPen} from 'react-icons/bs';
+import { ImPriceTag} from 'react-icons/im';
+import { DiGitCompare } from 'react-icons/di';
 function Kartica({telefon,uporedi}) {
     return (
       <div className="card" >
@@ -7,17 +9,18 @@ function Kartica({telefon,uporedi}) {
                     <img src={telefon.slika} alt="" className="card-img-top" />
               </div>
               <div className="card-body">
-                <h3 className="product-name">{telefon.model}</h3>
-                <h5>
+                <h4 className="product-name">{telefon.model}</h4>
+                <hr />
+                <h5 className='karakteristike'>
                     
-                    Ekran: {telefon.ekran} <br />
-                    Cena: {telefon.cena} <br />        
-                    Baterija: {telefon.baterija} <br />     
-                    Boja: {telefon.boja} <br />        
+                    <BsFillPhoneFill></BsFillPhoneFill>  Ekran: {telefon.ekran} <br />
+                    <ImPriceTag></ImPriceTag>  Cena: {telefon.cena} <br />        
+                    <BsBatteryFull></BsBatteryFull>  Baterija: {telefon.baterija} <br />     
+                    <BsPen></BsPen>  Boja: {telefon.boja} <br />        
 
                 </h5>
               </div>
-            <button className="btn" onClick={()=>uporedi(telefon.id)}>Uporedi</button>
+            <button className="btnCompare" onClick={()=>uporedi(telefon.id)}><DiGitCompare></DiGitCompare></button>
       </div>
   
   
