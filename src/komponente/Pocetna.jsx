@@ -1,10 +1,12 @@
- 
-import { Link } from 'react-router-dom'
+import Kartica from "./Kartica";
 
-function Pocetna() {
+ 
+
+function Pocetna({telefoni}) {
   return (
-    <div  >
-        <h1>Ovo je pocetna</h1>
+    <div className="all-products" >
+        {telefoni.map((t)=><Kartica telefon={t}></Kartica>)}
+        
     </div>
 
 
