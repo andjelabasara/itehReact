@@ -2,10 +2,10 @@ import Kartica from "./Kartica";
 
  
 
-function Pocetna({telefoni}) {
+function Pocetna({telefoni,uporedi}) {
   return (
     <div className="all-products" >
-        {telefoni.map((t)=><Kartica telefon={t}></Kartica>)}
+        {telefoni.map((t)=><Kartica key={t.id} telefon={t} uporedi={uporedi}></Kartica>)}
         
     </div>
 

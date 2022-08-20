@@ -1,6 +1,6 @@
  
 
-function Kartica({telefon}) {
+function Kartica({telefon,uporedi}) {
     return (
       <div className="card" >
               <div className="card-header">
@@ -17,7 +17,7 @@ function Kartica({telefon}) {
 
                 </h5>
               </div>
-            <button className="btn">Uporedi</button>
+            <button className="btn" onClick={()=>uporedi(telefon.id)}>Uporedi</button>
       </div>
   
   
